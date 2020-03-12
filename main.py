@@ -6,11 +6,9 @@ from Util import *
 import argparse
 
 
-# load data set
-original_data = DataStruct('TinyMNIST')
-
 # parse input argument
 parser = argparse.ArgumentParser(description='This is a script used to run the tests')
+parser.add_argument('-dataset', '--dataset-path', default='MNIST', help='path on dataset relative to this file')
 parser.add_argument('-tr', '--train-type', default=TR_BGD, help='bgd/sgd')
 parser.add_argument('-ex', '--test-type', default='con', help='con/nc/reg/norm/init/lr/custom')
 parser.add_argument('-rf', '--regularization-factor', default=0, help='number')
@@ -21,6 +19,9 @@ parser.add_argument('-it', '--init-type', default=IT_RANDOM, help='random/xavier
 parser.add_argument('-lf', '--loss-function', default=LF_SOFTMAX, help='softmax/svm')
 parser.add_argument('-af', '--activation-function', nargs='+', help='tanh/relu/lrelu/linear', required = True)
 args = parser.parse_args()
+
+# load data set
+original_data = DataStruct(args.dataset_path)
 
 # check activation function list len
 if not len(args.activation_function) == 1:
