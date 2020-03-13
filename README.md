@@ -13,12 +13,6 @@ You can specify the type of experiment using a command-line argument, which will
 
 
 
-## Table of Contents
-
-[TOC]
-
-
-
 ## Getting Started
 
 ### Installation
