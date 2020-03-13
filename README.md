@@ -35,7 +35,7 @@ First, install requirements.
 
 `pip install -r requirement.txt`
 
-Second, you need to download MNIST or TinyMNIST dataset, and then, put them in the folder in the project repository.
+Second, you need to download MNIST or TinyMNIST dataset, and then, put them in the folder in the project repository. You can download the MNIST dataset from http://yann.lecun.com/exdb/mnist/.
 
 **Notice:**  The dataset should contain 4 csv files including `testData.csv`, `testLabels.csv`, `trainData.csv`, and `trainLabels.csv`. Below is an image of the correct structure of dataset.
 
