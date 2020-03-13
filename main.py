@@ -17,7 +17,7 @@ parser.add_argument('-hs', '--hidden-size', default=20, help='number')
 parser.add_argument('-ne', '--normalization-enable', action='store_true', help='normalization enable')
 parser.add_argument('-it', '--init-type', default=IT_RANDOM, help='random/xavier')
 parser.add_argument('-lf', '--loss-function', default=LF_SOFTMAX, help='softmax/svm')
-parser.add_argument('-af', '--activation-function', nargs='+', help='tanh/relu/lrelu/linear', required = True)
+parser.add_argument('-af', '--activation-function', default=['relu'], nargs='+', help='tanh/relu/lrelu/linear')
 args = parser.parse_args()
 
 # load data set
